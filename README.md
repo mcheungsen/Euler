@@ -15,3 +15,19 @@ Each problem is implemented in an individual class named `ProblemX`. Each of the
 
 -   The main program includes a scanner. Simply enter the number of the problem you wish to solve.
 -   The class corresponding to the problem will be compiled and executed.
+
+## 🧠 problems
+
+| Problem | Status | Answer  |
+|:-------:|:------:| ------- |
+|    1    |   ✅   | 233168  |
+|    2    |   ✅   | 4613732 |
+|    3    |   🚧   |         |
+|    4    |   ❌   |         |
+|    5    |   ❌   |         |
+|    6    |   ❌   |         |
+|    7    |   ❌   |         |
+|    8    |   ❌   |         |
+|   ...   |  ...   | ...     | 
+
+Keep up the good work and happy problem solving! 🚀 
