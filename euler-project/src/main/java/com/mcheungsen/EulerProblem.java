@@ -1,5 +1,6 @@
 package com.mcheungsen;
 
 public interface EulerProblem {
-    void solve();
+    int solve();
+    String getName();
 }
