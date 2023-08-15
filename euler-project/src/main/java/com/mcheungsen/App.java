@@ -16,27 +16,35 @@ public class App {
     public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException, MalformedURLException {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Entrez le numéro du problème à résoudre : ");
-        int problemNumber = scanner.nextInt();
+        while(true){
+            System.out.print("Enter the problem number to solve : ");
+            int problemNumber = scanner.nextInt();
 
-        // Construire le nom complet de la classe
-        String problemClassName = "com.mcheungsen.Problems.Problem" + problemNumber;
+            //quitter ?
+            if(problemNumber == -1){
+                System.out.println("Program Terminated.");
+                break;
+            }
 
-        try {
-            // Charger la classe à partir de son nom
-            Class<?> problemClass = Class.forName(problemClassName);
+            // Construire le nom complet de la classe
+            String problemClassName = "com.mcheungsen.Problems.Problem" + problemNumber;
 
-            // Créer une instance de la classe
-            EulerProblem problem = (EulerProblem) problemClass.getDeclaredConstructor().newInstance();
+            try {
+                // Charger la classe à partir de son nom
+                Class<?> problemClass = Class.forName(problemClassName);
 
-            // Exécuter la méthode solve()
-            problem.solve();
-        } catch (ClassNotFoundException e) {
-            System.out.println("Problème non trouvé : " + e.getMessage());
-        } catch (Exception e) {
-            e.printStackTrace();
+                // Créer une instance de la classe
+                EulerProblem problem = (EulerProblem) problemClass.getDeclaredConstructor().newInstance();
+
+                // Exécuter
+                System.out.println(problem.getName() + " : " + problem.solve());
+            } catch (ClassNotFoundException e) {
+                System.out.println("Problem not found : " + e.getMessage());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
         }
-
         scanner.close();
     }
 }
