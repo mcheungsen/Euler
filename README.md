@@ -25,8 +25,8 @@ Each problem is implemented in an individual class named `ProblemX`. Each of the
 |    3    |   ✅   | 6857    |
 |    4    |   ✅   | 906609  |
 |    5    |   ✅   |232792560 |
-|    6    |   ❌   |         |
-|    7    |   ❌   |         |
+|    6    |   ✅   |25164150 |
+|    7    |   ✅   |  104743 |
 |    8    |   ❌   |         |
 |   ...   |  ...   | ...     | 
 
